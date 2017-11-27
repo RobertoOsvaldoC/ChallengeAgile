@@ -1,0 +1,21 @@
+##
+## CONFIGURACIONES DE TOMCAT EMBED
+##
+#server:
+#    port: 80
+#    contextPath: /ch01
+#
+##
+## CONFIGURACIONES DE SPRING
+##
+#spring:
+#    mvc:
+#        view:
+#            prefix: /WEB-INF/views/
+#            suffix: .jsp
+#    datasource:
+#            url: jdbc:postgresql://localhost:5432/ch01
+#            username: postgres
+#            password: pipa1234
+#
+#
