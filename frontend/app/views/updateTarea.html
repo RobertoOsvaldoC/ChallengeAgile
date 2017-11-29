@@ -1,0 +1,16 @@
+<form ng-submit="guardar()" ng-controller="UpdateTareaCtrl">
+  <div class="form-group" >
+    <label for="exampleInputEmail1" >ID Tarea</label>
+    <input ng-model="idtarea" ng-bind-html="data.idtarea" class="form-control" id="exampleInputEmail1"  disabled>
+    <label for="exampleInputEmail1">Nombre Tarea</label>
+    <input ng-model="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">Ingrese nombre de la tarea<br/></small>
+    <label for="exampleInputEmail1">Descripción</label>
+    <input ng-model="descripcion" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">Ingrese la descripción de la prioridad.<br/></small>
+    <label for="exampleInputEmail1">ID prioridad</label>
+    <input ng-model="idprioridad" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">Ingrese la id de la prioridad.</small>
+  </div>
+  <button type="submit" class="btn btn-primary" onClick="location.href='http://localhost:9000'"></a>Actualizar</button>
+</form>

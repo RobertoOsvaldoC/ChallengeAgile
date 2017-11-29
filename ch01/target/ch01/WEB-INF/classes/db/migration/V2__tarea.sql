@@ -1,5 +1,5 @@
 CREATE TABLE TAREA (
-	idTarea integer NOT NULL,
+	idTarea serial NOT NULL,
 	nombre varchar(50), 
 	descripcion varchar(500),
 	idPrioridad integer NOT NULL,

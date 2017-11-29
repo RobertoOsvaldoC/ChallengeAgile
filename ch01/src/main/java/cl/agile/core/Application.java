@@ -16,10 +16,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.web.multipart.commons.CommonsMultipartResolver;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
-import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
@@ -67,9 +64,14 @@ public class Application extends SpringBootServletInitializer {
     		CommonsMultipartResolver resolver = new CommonsMultipartResolver();
     		resolver.setMaxUploadSize(1000000);
     		return resolver;
-    	}    	
-    	
-    	@Override
+    	}
+
+        @Override
+        public void addCorsMappings(CorsRegistry registry) {
+            registry.addMapping("/**").allowedOrigins("http://localhost:9000");
+        }
+
+        @Override
         public void configureViewResolvers(ViewResolverRegistry registry) {
             InternalResourceViewResolver resolver = new InternalResourceViewResolver();
             resolver.setViewClass(JstlView.class);

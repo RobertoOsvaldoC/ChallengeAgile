@@ -1,0 +1,54 @@
+
+
+
+<style>
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+</style>
+
+
+
+<div class="jumbotron">
+  <h2>Datos</h2>
+<button type="button" ng-click='mostrar()' class="btn btn-primary" >Ver Datos</button>
+  <table style="margin: 0 auto;">
+    <h2>Listado de tareas</h2>
+    <tr>
+      <th>ID Tarea</th>.
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Prioridad</th>
+      <th>Editar</th>
+      <th>Eliminar</th>
+    </tr>
+    <tr ng-repeat="test in listaTareas">
+      <td>{{test.idtarea}}</td>
+      <td>{{test.nombre}}</td> 
+      <td>{{test.descripcion}}</td>
+      <td>{{test.idprioridad.descripcion}}</td>
+      <th><a href="#!/updateTarea/{{test.idtarea}}">Editar</a></th>
+      <td><span type="button" class="glyphicon glyphicon-trash" ng-click='eliminar(test.idtarea)' ></span></td>
+    </tr>
+  </table>
+  <table style="margin: 0 auto;">
+    <h2>Listado de prioridades</h2>
+    <tr>
+      <th>ID Prioridad</th>.
+      <th>Descripcion</th>
+    </tr>
+    <tr ng-repeat="prioridad in listaPrioridades">
+      <td>{{prioridad.idprioridad}}</td>
+      <td>{{prioridad.descripcion}}</td>
+      <th><a href="#!/updatePrioridad/{{prioridad.idprioridad}}">Editar</a></th>
+    </tr>
+  </table> 
+</div>

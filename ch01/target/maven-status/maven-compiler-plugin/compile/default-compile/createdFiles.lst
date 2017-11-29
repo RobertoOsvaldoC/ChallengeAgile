@@ -1,5 +1,14 @@
-cl\agile\core\Application.class
+cl\agile\core\services\TareaService.class
+cl\agile\core\controller\PrioridadController.class
 cl\agile\core\Application$CustomConfigurerAdapter.class
-cl\agile\core\Application$SecurityConfig.class
+cl\agile\core\services\PrioridadService.class
 cl\agile\core\controller\APIController.class
+cl\agile\core\entities\Prioridad.class
+cl\agile\core\entities\Tarea.class
+cl\agile\core\Application.class
+cl\agile\core\controller\TareaController.class
+cl\agile\core\dao\DaoUtilities.class
+cl\agile\core\Application$SecurityConfig.class
 cl\agile\core\controller\ViewController.class
+cl\agile\core\dao\TareaDao.class
+cl\agile\core\dao\PrioridadDao.class

@@ -1,0 +1,10 @@
+<form ng-submit="guardar()" ng-controller="UpdatePrioridadCtrl">
+  <div class="form-group">
+  	<label for="exampleInputEmail1">ID Prioridad</label>
+  	<input ng-model="idprioridad" ng-bind-html="data.idtarea" class="form-control" id="exampleInputEmail1"  disabled>
+    <label for="exampleInputEmail1">Descripción</label>
+    <input ng-model="descripcion" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">Ingrese la descripción de la prioridad.</small>
+  </div>
+  <button type="submit" class="btn btn-primary" onClick="location.href='http://localhost:9000'">Ingresar</button>
+</form>
