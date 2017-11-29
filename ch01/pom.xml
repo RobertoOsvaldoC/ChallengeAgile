@@ -48,11 +48,6 @@
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<!--<scope>provided</scope>-->
 		</dependency>
-		<dependency>
-			<groupId>commons-fileupload</groupId>
-			<artifactId>commons-fileupload</artifactId>
-			<version>${commons-fileupload.version}</version>
-		</dependency>
 		<!-- Servlet API and JSTL -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
